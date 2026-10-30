@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HappyFood — ผลไม้ฟรีซดรายและผลิตภัณฑ์อาหารคุณภาพจากประเทศไทย">
+  <meta name="theme-color" content="#173d2b">
+  <title>HappyFood | Real Fruit. Pure Happiness.</title>
+
+  <!-- Keep the original project assets so existing product photography and logo remain available. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <style>
+    :root{--green:#173d2b;--green2:#245b3d;--lime:#d7ed9a;--cream:#f7f6ef;--ink:#1d2921;--muted:#69756c;--line:#e7e9e1;--white:#fff;--shadow:0 18px 55px rgba(25,55,37,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:#fff;color:var(--ink);font-family:"DM Sans","Noto Sans Thai",sans-serif;line-height:1.65}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}.container{max-width:1160px}
+    .topline{background:var(--green);color:#eaf2e9;font-size:12px;padding:8px 0}.topline .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.topline a{opacity:.9}.topline a:hover{opacity:1;color:var(--lime)}
+    .site-header{height:82px;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(20,50,30,.07)}.nav-wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand img{width:205px;height:auto;max-height:58px;object-fit:contain}.nav-links{display:flex;align-items:center;gap:30px;margin:0;padding:0;list-style:none}.nav-links a{font-size:13px;font-weight:700;color:#46544a;transition:.2s}.nav-links a:hover,.nav-links a.active{color:var(--green2)}.nav-cta,.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--green);color:#fff;border:1px solid var(--green);border-radius:999px;padding:13px 22px;font-weight:700;font-size:13px;transition:.25s}.nav-cta:hover,.btn-primary:hover{background:var(--green2);color:#fff;transform:translateY(-2px);box-shadow:0 10px 24px #173d2b25}.menu-toggle{display:none;border:1px solid var(--line);background:white;border-radius:12px;width:44px;height:44px;color:var(--green);font-size:20px}
+    .hero{position:relative;overflow:hidden;background:var(--cream);padding:76px 0 82px}.hero:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:#e9efdc;right:-170px;top:-180px}.hero-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--green2);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.eyebrow:before{content:"";width:27px;height:2px;background:#9bbd5a}.hero h1{font-size:clamp(42px,5.2vw,68px);line-height:1.08;letter-spacing:-2.8px;color:var(--green);font-weight:800;margin:22px 0}.hero h1 span{color:#8aa94e}.hero p{font-size:16px;color:#647067;max-width:490px;line-height:1.9;margin-bottom:30px}.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.btn-light{font-weight:700;font-size:13px;color:var(--green);padding:12px 4px}.btn-light i{margin-left:8px}.hero-note{display:flex;gap:18px;margin-top:36px;color:#738075;font-size:11px;font-weight:700}.hero-note span{display:flex;align-items:center;gap:7px}.hero-note i{color:#86a94b}.hero-visual{position:relative;min-height:440px;display:flex;align-items:center;justify-content:center}.hero-photo{width:min(100%,510px);height:420px;object-fit:contain;filter:drop-shadow(0 24px 25px rgba(31,50,25,.12));position:relative;z-index:1}.float-card{position:absolute;z-index:2;bottom:24px;left:0;background:#fff;padding:15px 19px;border-radius:16px;box-shadow:var(--shadow);font-size:12px;font-weight:700}.float-card small{display:block;color:var(--muted);font-weight:500}.float-card strong{color:var(--green);font-size:16px}
+    .trustbar{border-bottom:1px solid var(--line);padding:23px 0}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;color:#56645a;font-size:12px;font-weight:700}.trust-item i{font-size:19px;color:#8aa94e}
+    section{padding:94px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 45px}.section-head .eyebrow{justify-content:center}.section-head h2{font-size:clamp(30px,3.5vw,43px);letter-spacing:-1.4px;color:var(--green);font-weight:800;line-height:1.2;margin:16px 0}.section-head p{color:var(--muted);font-size:14px;margin:0}
+    .about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-image{background:#f0f3e9;border-radius:28px;padding:30px;min-height:370px;display:flex;align-items:center;justify-content:center}.about-image img{max-height:360px;object-fit:contain}.about-copy h2{font-size:39px;line-height:1.2;color:var(--green);font-weight:800;letter-spacing:-1.4px;margin:15px 0}.about-copy p{font-size:14px;color:var(--muted);line-height:1.95}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.value{padding:17px 12px;border:1px solid var(--line);border-radius:15px}.value strong{display:block;color:var(--green);font-size:14px}.value small{color:var(--muted);font-size:11px}
+    .services{background:var(--cream)}.service-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:25px}.service-tab{border:1px solid #dfe4d8;background:#fff;color:#657167;border-radius:999px;padding:11px 18px;font-size:12px;font-weight:700;transition:.2s}.service-tab[aria-selected="true"],.service-tab:hover{background:var(--green);border-color:var(--green);color:white}.service-panel{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center;background:#fff;border-radius:24px;padding:35px;box-shadow:0 10px 40px rgba(30,55,35,.05)}.service-panel[hidden]{display:none}.service-panel h3{color:var(--green);font-size:28px;font-weight:800;margin:0 0 14px}.service-panel p{color:var(--muted);font-size:14px;line-height:1.9}.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.feature-list span{font-size:12px;font-weight:700;color:#526156}.feature-list i{color:#88a84d;margin-right:7px}.service-panel img{width:100%;height:280px;object-fit:contain;border-radius:16px}
+    .products{background:#fff}.product-toolbar{display:flex;align-items:center;justify-content:space-between;margin:-18px 0 25px}.product-toolbar p{font-size:12px;color:var(--muted);margin:0}.slider-controls{display:flex;gap:8px}.slider-controls button{width:40px;height:40px;border:1px solid var(--line);background:white;color:var(--green);border-radius:50%;transition:.2s}.slider-controls button:hover{background:var(--green);color:white}.product-track{display:grid;grid-auto-columns:calc((100% - 48px)/3);grid-auto-flow:column;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:5px 2px 18px}.product-track::-webkit-scrollbar{display:none}.product-card{scroll-snap-align:start;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;transition:.25s}.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.product-image{height:245px;background:#f6f7f2;display:flex;align-items:center;justify-content:center;padding:22px}.product-image img{height:100%;width:100%;object-fit:contain}.product-info{padding:20px}.product-info small{color:#8ba653;font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}.product-info h3{font-size:17px;color:var(--green);font-weight:800;margin:6px 0}.product-info p{font-size:12px;color:var(--muted);margin:0}
+    .oem{background:var(--green);color:#fff;position:relative;overflow:hidden}.oem:after{content:"";position:absolute;width:440px;height:440px;border:1px solid #ffffff20;border-radius:50%;right:-80px;top:-220px;box-shadow:0 0 0 50px #ffffff08,0 0 0 100px #ffffff05}.oem-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.oem .eyebrow{color:var(--lime)}.oem h2{font-size:clamp(32px,4vw,46px);line-height:1.18;font-weight:800;letter-spacing:-1.5px;margin:18px 0}.oem p{color:#d1dfd4;font-size:14px;line-height:1.9}.oem .btn-primary{background:var(--lime);color:var(--green);border-color:var(--lime)}.oem-form{background:#fff;border-radius:22px;padding:28px;color:var(--ink);box-shadow:0 18px 60px #0002}.oem-form h3{color:var(--green);font-size:20px;font-weight:800;margin:0 0 18px}.field{margin-bottom:13px}.field label{display:block;font-size:11px;font-weight:700;color:#59675c;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid #e2e7df;border-radius:11px;padding:12px 14px;font-size:13px;outline:none;transition:.2s}.field input:focus,.field textarea:focus{border-color:#88a84d;box-shadow:0 0 0 3px #88a84d20}.field textarea{min-height:95px;resize:vertical}.oem-form button{width:100%}.form-status{font-size:12px;margin:12px 0 0;color:var(--green);min-height:18px}
+    .journal{background:var(--cream)}.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.journal-card{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line)}.journal-card img{width:100%;height:190px;object-fit:cover}.journal-body{padding:18px}.journal-body small{color:#88a84d;font-size:10px;font-weight:800}.journal-body h3{font-size:16px;color:var(--green);font-weight:800;margin:8px 0}.journal-body p{font-size:12px;color:var(--muted);margin:0}
+    .contact{background:#fff}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px}.contact-card{background:var(--cream);border-radius:22px;padding:30px}.contact-card h3{font-size:24px;color:var(--green);font-weight:800;margin:0 0 12px}.contact-card p{font-size:13px;color:var(--muted)}.contact-line{display:flex;gap:13px;align-items:center;margin-top:23px;font-size:13px;font-weight:700;color:#435348}.contact-line i{width:40px;height:40px;display:grid;place-items:center;background:#e6edda;color:var(--green);border-radius:12px}.contact-form{border:1px solid var(--line);border-radius:22px;padding:28px}.contact-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.contact-form button{margin-top:4px}.map-frame{margin-top:25px;border:0;width:100%;height:210px;border-radius:15px}
+    footer{background:#102d20;color:#dbe5dc;padding:28px 0;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.footer-inner p{margin:0}.back-top{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s;z-index:900}.back-top.show{opacity:1;pointer-events:auto;transform:none}.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#173d2b;color:#fff;padding:12px 18px;border-radius:12px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:1200}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:991px){.nav-links{gap:16px}.nav-links a{font-size:12px}.hero-grid{gap:25px}.hero-visual{min-height:350px}.hero-photo{height:350px}.product-track{grid-auto-columns:calc((100% - 24px)/2)}}
+    @media(max-width:767px){.topline .container{justify-content:center}.topline .social{display:none}.site-header{height:70px}.brand img{width:170px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:#fff;padding:14px 22px 22px;box-shadow:0 18px 25px #173d2b12;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid var(--line)}.nav-links.open{display:flex}.nav-links li a{display:block;padding:12px 4px;font-size:14px}.nav-links .nav-cta{margin-top:8px;text-align:center;justify-content:center}.hero{padding:55px 0 45px}.hero-grid,.about-grid,.service-panel,.oem-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{gap:20px}.hero h1{font-size:46px;letter-spacing:-2px}.hero p{font-size:14px}.hero-visual{min-height:280px}.hero-photo{height:285px}.float-card{left:5px;bottom:0}.trust-grid{grid-template-columns:1fr;gap:13px}.trust-item{justify-content:flex-start}.trustbar{padding:18px 0}section{padding:68px 0}.about-grid{gap:28px}.about-image{min-height:270px}.about-image img{max-height:260px}.about-copy h2{font-size:32px}.value-grid{gap:7px}.value{padding:13px 8px}.value strong{font-size:12px}.value small{font-size:10px}.section-head{margin-bottom:30px}.section-head h2{font-size:32px}.service-panel{padding:22px;gap:20px}.service-panel img{height:220px;grid-row:1}.service-panel h3{font-size:24px}.feature-list{gap:9px}.product-track{grid-auto-columns:82%;gap:15px}.product-image{height:220px}.product-toolbar{margin-top:0}.oem-form{padding:22px}.journal-grid{grid-template-columns:1fr}.journal-card img{height:210px}.contact-form{padding:20px}.contact-form .form-row{grid-template-columns:1fr;gap:0}.footer-inner{justify-content:center;text-align:center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="container"><div><a href="mailto:HappyFood@gmail.com"><i class="fa fa-envelope"></i> HappyFood@gmail.com</a> &nbsp; · &nbsp; <a href="tel:0999999999"><i class="fa fa-phone"></i> 099-999-9999</a></div><div class="social">Made with care in Thailand</div></div></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="HappyFood home"><img src="assets/images/logoHappyFood-HEAD.png" alt="HappyFood"></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู" aria-expanded="false"><i class="fa fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a class="active" href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Our Expertise</a></li><li><a href="#products">Products</a></li><li><a href="#journal">Journal</a></li><li><a href="#contact">Contact</a></li>
+        <li><a class="nav-cta" href="#contact">Let’s Talk <i class="fa fa-arrow-right"></i></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Delicious from the heart · Thailand</span>
+          <h1>Real Fruit.<br><span>Pure Happiness.</span></h1>
+          <p>สัมผัสความอร่อยจากผลไม้ไทยในรูปแบบใหม่ กรอบ เบา พกพาสะดวก พร้อมเติมความสุขให้ทุกช่วงเวลาของคุณ</p>
+          <div class="hero-actions"><a class="btn-primary" href="#products">Explore Products <i class="fa fa-arrow-right"></i></a><a class="btn-light" href="#about">Discover HappyFood <i class="fa fa-long-arrow-right"></i></a></div>
+          <div class="hero-note"><span><i class="fa fa-check-circle"></i> Carefully selected</span><span><i class="fa fa-leaf"></i> Made with care</span></div>
+        </div>
+        <div class="hero-visual"><img class="hero-photo" src="assets/images/1DurianFD.png" alt="ทุเรียนฟรีซดราย HappyFood"><div class="float-card"><strong>Thai Fruit, Reimagined</strong><small>ความอร่อยที่พกพาไปได้ทุกที่</small></div></div>
+      </div>
+    </section>
+
+    <div class="trustbar"><div class="container trust-grid"><div class="trust-item"><i class="fa fa-leaf"></i> Carefully selected ingredients</div><div class="trust-item"><i class="fa fa-heart"></i> Crafted with care</div><div class="trust-item"><i class="fa fa-globe"></i> Proudly from Thailand</div></div></div>
+
+    <section class="about" id="about"><div class="container about-grid">
+      <div class="about-image"><img src="assets/images/mix_product.png" alt="ผลิตภัณฑ์อาหาร HappyFood"></div>
+      <div class="about-copy"><span class="eyebrow">A little about us</span><h2>Good food.<br>Good mood.<br><span style="color:#8aa94e">Happy moments.</span></h2><p>HappyFood มุ่งมั่นนำเสนอผลิตภัณฑ์อาหารที่น่าประทับใจ ตั้งแต่ผลไม้ฟรีซดราย อาหารแปรรูป เครื่องปรุงรส ไปจนถึงผลิตภัณฑ์ OEM เราใส่ใจในทุกรายละเอียดเพื่อส่งต่อประสบการณ์ความอร่อย</p><div class="value-grid"><div class="value"><strong>Quality</strong><small>ใส่ใจคุณภาพ</small></div><div class="value"><strong>Care</strong><small>ใส่ใจทุกขั้นตอน</small></div><div class="value"><strong>Trust</strong><small>สร้างความไว้วางใจ</small></div></div></div>
+    </div></section>
+
+    <section class="services" id="services"><div class="container"><div class="section-head"><span class="eyebrow">What we do</span><h2>Discover Our Expertise</h2><p>หลากหลายความเชี่ยวชาญด้านอาหาร พร้อมต่อยอดไอเดียของคุณให้เป็นผลิตภัณฑ์จริง</p></div>
+      <div class="service-tabs" role="tablist" aria-label="ประเภทบริการ">
+        <button class="service-tab" role="tab" id="tab-fruit" aria-controls="panel-fruit" aria-selected="true" data-tab="fruit">Freeze Dry Fruit</button>
+        <button class="service-tab" role="tab" id="tab-food" aria-controls="panel-food" aria-selected="false" data-tab="food">Processed Food</button>
+        <button class="service-tab" role="tab" id="tab-condiment" aria-controls="panel-condiment" aria-selected="false" data-tab="condiment">Condiment</button>
+        <button class="service-tab" role="tab" id="tab-oem" aria-controls="panel-oem" aria-selected="false" data-tab="oem">OEM Products</button>
+      </div>
+      <article class="service-panel" id="panel-fruit" role="tabpanel" aria-labelledby="tab-fruit"><div><h3>Fruit Freeze Dry</h3><p>เปลี่ยนผลไม้ให้เป็นของว่างที่ทั้งอร่อยและสะดวก เพลิดเพลินกับรสชาติผลไม้ในรูปแบบกรอบเบา เหมาะสำหรับรับประทานระหว่างวันและพกพา</p><div class="feature-list"><span><i class="fa fa-check"></i> Fruit-based snacks</span><span><i class="fa fa-check"></i> Convenient format</span><span><i class="fa fa-check"></i> Product variety</span><span><i class="fa fa-check"></i> Thai fruit inspiration</span></div></div><img src="assets/images/services-image.jpg" alt="ผลิตภัณฑ์ผลไม้ฟรีซดราย"></article>
+      <article class="service-panel" id="panel-food" role="tabpanel" aria-labelledby="tab-food" hidden><div><h3>Processed Food</h3><p>ผลิตภัณฑ์อาหารแปรรูปที่ตอบโจทย์ไลฟ์สไตล์ยุคใหม่ คัดสรรแนวคิดและรูปแบบสินค้าให้เหมาะกับความต้องการของตลาด</p><div class="feature-list"><span><i class="fa fa-check"></i> Convenient food</span><span><i class="fa fa-check"></i> Product development</span><span><i class="fa fa-check"></i> Market-focused</span><span><i class="fa fa-check"></i> Quality minded</span></div></div><img src="assets/images/services-image-02.jpg" alt="อาหารแปรรูป"></article>
+      <article class="service-panel" id="panel-condiment" role="tabpanel" aria-labelledby="tab-condiment" hidden><div><h3>Condiment</h3><p>เติมมิติให้ทุกเมนูด้วยผลิตภัณฑ์เครื่องปรุงรส หลากหลายไอเดียสำหรับผู้บริโภคและธุรกิจอาหาร</p><div class="feature-list"><span><i class="fa fa-check"></i> Flavor concepts</span><span><i class="fa fa-check"></i> Everyday use</span><span><i class="fa fa-check"></i> Product options</span><span><i class="fa fa-check"></i> Business solutions</span></div></div><img src="assets/images/services-image-03.jpg" alt="ผลิตภัณฑ์เครื่องปรุงรส"></article>
+      <article class="service-panel" id="panel-oem" role="tabpanel" aria-labelledby="tab-oem" hidden><div><h3>OEM Products</h3><p>มีไอเดียสินค้าอาหารของตัวเองใช่ไหม? พูดคุยกับเราเพื่อสำรวจแนวทางพัฒนาผลิตภัณฑ์และสร้างแบรนด์ในแบบของคุณ</p><div class="feature-list"><span><i class="fa fa-check"></i> Product consultation</span><span><i class="fa fa-check"></i> Brand concepts</span><span><i class="fa fa-check"></i> Flexible discussion</span><span><i class="fa fa-check"></i> Start your project</span></div></div><img src="assets/images/services-image-04.jpg" alt="บริการพัฒนาผลิตภัณฑ์ OEM"></article>
+    </div></section>
+
+    <section class="products" id="products"><div class="container"><div class="section-head"><span class="eyebrow">Made to make you smile</span><h2>Explore Our Products</h2><p>เลือกชมผลิตภัณฑ์จาก HappyFood และค้นพบความอร่อยในแบบที่ใช่</p></div>
+      <div class="product-toolbar"><p>เลื่อนเพื่อชมผลิตภัณฑ์เพิ่มเติม</p><div class="slider-controls"><button type="button" id="productPrev" aria-label="สินค้าก่อนหน้า"><i class="fa fa-angle-left"></i></button><button type="button" id="productNext" aria-label="สินค้าถัดไป"><i class="fa fa-angle-right"></i></button></div></div>
+      <div class="product-track" id="productTrack">
+        <article class="product-card"><div class="product-image"><img src="assets/images/1DurianFD.jpg" alt="Durian Freeze Dry"></div><div class="product-info"><small>Freeze Dry Fruit</small><h3>Durian Freeze Dry</h3><p>ทุเรียนฟรีซดราย ของว่างผลไม้ไทยในรูปแบบกรอบเบา</p></div></article>
+        <article class="product-card"><div class="product-image"><img src="assets/images/1DurianFD.jpg" alt="HappyFood fruit snack"></div><div class="product-info"><small>Fruit Snack</small><h3>Fruit Collection</h3><p>ค้นพบไอเดียของว่างจากผลไม้หลากหลายรูปแบบ</p></div></article>
+        <article class="product-card"><div class="product-image"><img src="assets/images/1DurianFD.jpg" alt="Thai fruit product"></div><div class="product-info"><small>Signature Selection</small><h3>Thai Fruit Selection</h3><p>แรงบันดาลใจจากผลไม้ไทย คัดสรรเพื่อความอร่อย</p></div></article>
+        <article class="product-card"><div class="product-image"><img src="assets/images/mix_product.png" alt="HappyFood mixed products"></div><div class="product-info"><small>Our Collection</small><h3>HappyFood Collection</h3><p>ผลิตภัณฑ์อาหารหลากหลายจาก HappyFood</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="oem" id="oem"><div class="container oem-grid"><div><span class="eyebrow">Let’s create something delicious</span><h2>Have an idea for your own food brand?</h2><p>เริ่มต้นพูดคุยเกี่ยวกับผลิตภัณฑ์ OEM ของคุณ บอกแนวคิดและช่องทางติดต่อ แล้วทีมงานจะได้รับรายละเอียดเพื่อใช้พูดคุยต่อ</p><a class="btn-primary" href="#contact">Talk to our team <i class="fa fa-arrow-right"></i></a></div>
+      <form class="oem-form" id="quoteForm"><h3>Tell us about your project</h3><div class="field"><label for="quoteName">Your name</label><input id="quoteName" name="name" required placeholder="ชื่อของคุณ"></div><div class="field"><label for="quoteEmail">Email address</label><input id="quoteEmail" name="email" type="email" required placeholder="name@example.com"></div><div class="field"><label for="quoteWebsite">Website (optional)</label><input id="quoteWebsite" name="website" type="url" placeholder="https://"></div><button class="btn-primary" type="submit">Prepare inquiry <i class="fa fa-arrow-right"></i></button><p class="form-status" id="quoteStatus" aria-live="polite"></p></form>
+    </div></section>
+
+    <section class="journal" id="journal"><div class="container"><div class="section-head"><span class="eyebrow">From HappyFood</span><h2>Stories & Inspiration</h2><p>เรื่องราวและแรงบันดาลใจเบื้องหลังโลกของผลิตภัณฑ์อาหาร</p></div>
+      <div class="journal-grid">
+        <article class="journal-card"><img src="assets/images/blog-post-01.jpg" alt="Food inspiration"><div class="journal-body"><small>FOOD INSPIRATION</small><h3>Discover a New Way to Enjoy Fruit</h3><p>เปิดประสบการณ์ของว่างจากผลไม้ในรูปแบบที่แตกต่าง</p></div></article>
+        <article class="journal-card"><img src="assets/images/blog-post-02.jpg" alt="Product ideas"><div class="journal-body"><small>PRODUCT IDEAS</small><h3>From a Simple Idea to a Product</h3><p>ทุกผลิตภัณฑ์เริ่มต้นจากไอเดียดี ๆ ที่อยากแบ่งปัน</p></div></article>
+        <article class="journal-card"><img src="assets/images/blog-post-03.jpg" alt="HappyFood lifestyle"><div class="journal-body"><small>HAPPY LIFESTYLE</small><h3>Small Bites, Happy Moments</h3><p>เติมความสุขเล็ก ๆ ให้ทุกช่วงเวลาของวัน</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="contact" id="contact"><div class="container"><div class="section-head"><span class="eyebrow">We’d love to hear from you</span><h2>Let’s Get in Touch</h2><p>มีคำถามหรือสนใจผลิตภัณฑ์ ติดต่อพูดคุยกับ HappyFood ได้เลย</p></div>
+      <div class="contact-grid"><div class="contact-card"><h3>Say hello to HappyFood.</h3><p>ติดต่อเราเพื่อสอบถามข้อมูลผลิตภัณฑ์ บริการ OEM หรือพูดคุยเกี่ยวกับโอกาสทางธุรกิจ</p><div class="contact-line"><i class="fa fa-phone"></i><a href="tel:0999999999">099-999-9999</a></div><div class="contact-line"><i class="fa fa-envelope"></i><a href="mailto:HappyFood@email.com">HappyFood@email.com</a></div><div class="contact-line"><i class="fa fa-map-marker"></i><span>7 Bangphom 34</span></div><iframe class="map-frame" title="แผนที่ HappyFood" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d323.31353544909865!2d100.44143797102011!3d13.75571999586676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299df34637feb%3A0xcc958fe000461e5e!2zMzMg4LiW4LiZ4LiZIOC4muC4suC4h-C4nuC4o-C4oSDguYHguILguKfguIfguJrguLLguIfguJ7guKPguKEg4LmA4LiC4LiV4LiV4Lil4Li04LmI4LiH4LiK4Lix4LiZIOC4geC4o-C4uOC4h-C5gOC4l-C4nuC4oeC4q-C4suC4meC4hOC4oyAxMDE3MCDguJvguKPguLDguYDguJfguKjguYTguJfguKI!5e0!3m2!1sth!2sfr!4v1757148377793!5m2!1sth!2sfr"></iframe></div>
+        <form class="contact-form" id="contactForm"><div class="contact-form form-inner"><div class="form-row"><div class="field"><label for="contactName">Name *</label><input id="contactName" name="name" required placeholder="Your name"></div><div class="field"><label for="contactEmail">Email *</label><input id="contactEmail" name="email" type="email" required placeholder="you@example.com"></div></div><div class="field"><label for="contactSubject">Subject</label><input id="contactSubject" name="subject" placeholder="How can we help?"></div><div class="field"><label for="contactMessage">Message *</label><textarea id="contactMessage" name="message" required placeholder="Write your message here..."></textarea></div><button class="btn-primary" type="submit">Prepare email <i class="fa fa-paper-plane"></i></button><p class="form-status" id="contactStatus" aria-live="polite">กดส่งแล้วระบบจะเปิดโปรแกรมอีเมลของคุณพร้อมกรอกข้อความให้</p></div></form>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container footer-inner"><p>© <span id="year"></span> HappyFood Co., Ltd. All Rights Reserved.</p><p>Real Fruit. Pure Happiness. · Made with care in Thailand</p></div></footer>
+  <a href="#home" class="back-top" id="backTop" aria-label="กลับขึ้นด้านบน"><i class="fa fa-angle-up"></i></a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const $ = (selector, root=document) => root.querySelector(selector);
+      const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
+      const menuToggle = $('#menuToggle'), navLinks = $('#navLinks');
+      menuToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.innerHTML = open ? '<i class="fa fa-times"></i>' : '<i class="fa fa-bars"></i>';
+      });
+      $$('#navLinks a').forEach(link => link.addEventListener('click', () => {
+        navLinks.classList.remove('open'); menuToggle.setAttribute('aria-expanded','false');
+        menuToggle.innerHTML = '<i class="fa fa-bars"></i>';
+      }));
+
+      // Accessible service tabs: mouse, touch and keyboard navigation.
+      const tabs = $$('.service-tab');
+      function activateTab(tab, moveFocus=false) {
+        tabs.forEach(item => {
+          const selected = item === tab;
+          item.setAttribute('aria-selected', String(selected));
+          item.tabIndex = selected ? 0 : -1;
+          const panel = document.getElementById(item.getAttribute('aria-controls'));
+          panel.hidden = !selected;
+        });
+        if (moveFocus) tab.focus();
+      }
+      tabs.forEach((tab,index) => {
+        tab.addEventListener('click', () => activateTab(tab));
+        tab.addEventListener('keydown', event => {
+          if (!['ArrowRight','ArrowLeft','Home','End'].includes(event.key)) return;
+          event.preventDefault();
+          let next = index;
+          if (event.key === 'ArrowRight') next = (index+1)%tabs.length;
+          if (event.key === 'ArrowLeft') next = (index-1+tabs.length)%tabs.length;
+          if (event.key === 'Home') next = 0;
+          if (event.key === 'End') next = tabs.length-1;
+          activateTab(tabs[next], true);
+        });
+      });
+      tabs.forEach((tab,i) => tab.tabIndex = i === 0 ? 0 : -1);
+
+      const track = $('#productTrack');
+      $('#productPrev').addEventListener('click', () => track.scrollBy({left:-track.clientWidth*.82,behavior:'smooth'}));
+      $('#productNext').addEventListener('click', () => track.scrollBy({left:track.clientWidth*.82,behavior:'smooth'}));
+
+      function showToast(message) {
+        const toast = $('#toast'); toast.textContent = message; toast.classList.add('show');
+        window.clearTimeout(showToast.timer); showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 3200);
+      }
+      function prepareEmail(form, statusId, subjectPrefix) {
+        const data = new FormData(form);
+        const name = String(data.get('name') || '').trim();
+        const email = String(data.get('email') || '').trim();
+        if (!name || !email || !form.reportValidity()) return;
+        const subject = subjectPrefix + (data.get('subject') ? ' - ' + data.get('subject') : '');
+        const body = [...data.entries()].map(([key,value]) => `${key}: ${value}`).join('\n');
+        const mailto = `mailto:HappyFood@email.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        $('#'+statusId).textContent = 'กำลังเปิดโปรแกรมอีเมลเพื่อส่งคำสอบถาม… หากไม่เปิดอัตโนมัติ กรุณาตรวจสอบการตั้งค่าอีเมล';
+        window.location.href = mailto;
+      }
+      $('#quoteForm').addEventListener('submit', event => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        if (!form.reportValidity()) return;
+        const data = new FormData(form);
+        const body = `Name: ${data.get('name')}\nEmail: ${data.get('email')}\nWebsite: ${data.get('website') || '-'}`;
+        $('#quoteStatus').textContent = 'กำลังเปิดโปรแกรมอีเมล…';
+        window.location.href = `mailto:HappyFood@email.com?subject=${encodeURIComponent('OEM Project Inquiry')}&body=${encodeURIComponent(body)}`;
+      });
+      $('#contactForm').addEventListener('submit', event => {
+        event.preventDefault();
+        prepareEmail(event.currentTarget, 'contactStatus', 'HappyFood Website Inquiry');
+      });
+
+      const backTop = $('#backTop');
+      window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 500), {passive:true});
+      $('#year').textContent = new Date().getFullYear();
+
+      // Highlight the current section in the navigation.
+      const sections = $$('main section[id]');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              $$('#navLinks a[href^="#"]').forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+entry.target.id));
+            }
+          });
+        }, {rootMargin:'-35% 0px -55% 0px'});
+        sections.forEach(section => observer.observe(section));
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HappyFood | Freeze-dried fruit from Thailand</title>
+<meta name="description" content="Freeze-dried durian and fruit snacks, processed food, condiments and OEM products made in Thailand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Noto+Sans+Thai:wght@400;500;600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#12352a; --leaf:#2f7a4d; --yolk:#ffd23f; --mint:#eef5ee; --white:#fff;
+  --ink:#1c2b24; --muted:#5d6f65; --line:#d8e4da;
+  --r-lg:28px; --r-md:16px; --r-sm:10px;
+  --display:'Bricolage Grotesque','Noto Sans Thai',sans-serif;
+  --body:'Figtree','Noto Sans Thai',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--leaf);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.08;letter-spacing:-.02em;color:var(--forest)}
+h2{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:800}
+.lead{color:var(--muted);max-width:56ch}
+section{padding:96px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:600;font-size:1rem;border:2px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .2s,background .2s,color .2s}
+.btn-primary{background:var(--yolk);color:var(--forest)}
+.btn-primary:hover{transform:translateY(-2px);background:#ffdb66}
+.btn-dark{background:var(--forest);color:var(--white)}
+.btn-dark:hover{background:var(--leaf)}
+.btn-line{border-color:var(--forest);color:var(--forest)}
+.btn-line:hover{background:var(--forest);color:var(--white)}
+
+/* top bar + nav */
+.topbar{background:var(--forest);color:#cfe3d6;font-size:.88rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 0;flex-wrap:wrap}
+.topbar a{margin-right:20px}.topbar a:hover{color:var(--yolk)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo img{height:40px;width:auto}
+.logo{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--forest)}
+.menu{display:flex;align-items:center;gap:30px;list-style:none;font-weight:500}
+.menu a:not(.btn){padding:6px 0;border-bottom:2px solid transparent}
+.menu a:not(.btn):hover,.menu a.active{border-color:var(--yolk)}
+.burger{display:none;background:none;border:2px solid var(--forest);border-radius:10px;padding:8px 14px;font:600 .95rem var(--body);color:var(--forest);cursor:pointer}
+
+/* hero */
+.hero{padding:56px 0 96px;background:linear-gradient(180deg,var(--mint),var(--white))}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6.6vw,5.4rem);font-weight:800;margin:14px 0 22px}
+.hero .kicker{display:inline-block;background:var(--white);border:1px solid var(--line);padding:6px 16px;border-radius:999px;font-size:.92rem;color:var(--leaf);font-weight:600}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:50ch;margin-bottom:32px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.stage{position:relative;aspect-ratio:1;display:grid;place-items:center}
+.stage::before{content:"";position:absolute;inset:6%;border-radius:50%;background:var(--yolk)}
+.stage::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--leaf);opacity:.45;animation:spin 60s linear infinite}
+.stage img{position:relative;z-index:1;width:88%;filter:drop-shadow(0 28px 32px rgba(18,53,42,.28))}
+.tag{position:absolute;z-index:2;background:var(--forest);color:var(--white);padding:10px 18px;border-radius:999px;font-weight:600;font-size:.92rem}
+.tag.a{top:10%;left:-2%}.tag.b{bottom:12%;right:-2%;background:var(--white);color:var(--forest);box-shadow:0 10px 30px rgba(18,53,42,.15)}
+.hero .reveal{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero .reveal.d{animation-delay:.25s}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-img{background:var(--mint);border-radius:var(--r-lg);padding:32px;aspect-ratio:1/.9;display:grid;place-items:center}
+.about h2{margin-bottom:18px}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.value{border:1px solid var(--line);border-radius:var(--r-md);padding:18px}
+.value b{display:block;font-family:var(--display);font-size:1.1rem;color:var(--forest)}
+.value span{color:var(--muted);font-size:.92rem}
+.value i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--yolk);color:var(--forest);font-style:normal;font-weight:800;margin-bottom:10px}
+
+/* services */
+.services{background:var(--forest);color:#dbeadf}
+.services h2{color:var(--white);margin-bottom:36px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tabs button{background:transparent;color:#dbeadf;border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:11px 24px;font:600 1rem var(--body);cursor:pointer;transition:background .2s,color .2s}
+.tabs button:hover{border-color:var(--yolk)}
+.tabs button[aria-selected=true]{background:var(--yolk);color:var(--forest);border-color:var(--yolk)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:rgba(255,255,255,.06);border-radius:var(--r-lg);padding:40px}
+.panel.on{display:grid}
+.panel h3{color:var(--white);font-size:2rem;margin-bottom:14px}
+.panel ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.panel li{background:rgba(255,255,255,.1);padding:6px 16px;border-radius:999px;font-size:.92rem}
+.ph{border-radius:var(--r-md);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,var(--leaf),#1d5a3a)}
+.ph img{width:100%;height:100%;object-fit:cover}
+
+/* OEM band */
+.oem{background:var(--yolk);padding:72px 0}
+.oem .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.oem h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+.oem p{color:var(--forest);margin-top:10px}
+.field{width:100%;padding:15px 18px;border:2px solid transparent;border-radius:var(--r-sm);background:var(--white);font:1rem var(--body);color:var(--ink)}
+.field:focus{outline:none;border-color:var(--forest)}
+.oem form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.oem form .btn{grid-column:1/-1}
+
+/* products */
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:36px}
+.arrows{display:flex;gap:10px}
+.arrows button{width:48px;height:48px;border-radius:50%;border:2px solid var(--forest);background:none;color:var(--forest);font-size:1.2rem;cursor:pointer;transition:background .2s,color .2s}
+.arrows button:hover{background:var(--forest);color:var(--white)}
+.rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(300px,78%);scroll-snap-align:start}
+.card .pic{background:var(--mint);border-radius:var(--r-lg);aspect-ratio:1;overflow:hidden;margin-bottom:14px;transition:transform .3s}
+.card:hover .pic{transform:translateY(-6px)}
+.card .pic img{width:100%;height:100%;object-fit:cover}
+.card h3{font-size:1.25rem}
+.card span{color:var(--muted);font-size:.95rem}
+
+/* blog */
+.blog{background:var(--mint)}
+.blog h2{margin-bottom:36px}
+.posts{display:grid;grid-template-columns:1.1fr 1fr;gap:28px}
+.feature{background:var(--white);border-radius:var(--r-lg);overflow:hidden}
+.feature .ph{border-radius:0;aspect-ratio:16/10}
+.feature .body{padding:28px}
+.meta{font-size:.88rem;color:var(--leaf);font-weight:600;margin-bottom:6px}
+.feature h3{font-size:1.6rem;margin-bottom:10px}
+.feature p{color:var(--muted)}
+.list{display:grid;gap:18px}
+.item{display:grid;grid-template-columns:130px 1fr;gap:18px;background:var(--white);border-radius:var(--r-md);padding:14px;align-items:center}
+.item .ph{aspect-ratio:1}
+.item h3{font-size:1.1rem;margin-bottom:4px}
+.item p{font-size:.92rem;color:var(--muted);line-height:1.5}
+.feature:hover h3,.item:hover h3{color:var(--leaf)}
+
+/* contact */
+.contact .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;margin-top:36px}
+.map{border-radius:var(--r-lg);overflow:hidden;min-height:480px;background:var(--mint)}
+.map iframe{width:100%;height:100%;min-height:480px;border:0}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.info a{border:1px solid var(--line);border-radius:var(--r-md);padding:14px;font-size:.92rem;font-weight:600;color:var(--forest);word-break:break-word}
+.info a:hover{border-color:var(--forest)}
+.info small{display:block;color:var(--muted);font-weight:500}
+.contact form{display:grid;gap:12px}
+.contact .field{background:var(--mint)}
+.contact textarea.field{min-height:140px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+footer{background:var(--forest);color:#a9c4b3;padding:32px 0;text-align:center;font-size:.92rem}
+
+@media(max-width:900px){
+  section{padding:64px 0}
+  .hero .wrap,.about .wrap,.oem .wrap,.posts,.contact .grid,.panel.on{grid-template-columns:1fr}
+  .panel{padding:24px}
+  .stage{max-width:420px;margin:0 auto}
+  .burger{display:block}
+  .menu{display:none;position:absolute;left:0;right:0;top:72px;flex-direction:column;align-items:flex-start;gap:16px;background:var(--white);padding:20px;border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}
+  .info,.values{grid-template-columns:1fr}
+  .two,.oem form{grid-template-columns:1fr}
+  .topbar .social{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div><a href="mailto:HappyFood@gmail.com">HappyFood@gmail.com</a><a href="tel:0999999999">099-999-9999</a></div>
+  <div class="social"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LINE</a></div>
+</div></div>
+
+<header><div class="wrap"><nav>
+  <a href="#top" class="logo"><img src="assets/images/logoHappyFood-HEAD.png" alt="HappyFood"></a>
+  <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+  <ul class="menu" id="menu">
+    <li><a href="#top" class="active">Home</a></li>
+    <li><a href="#about">About us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#quote" class="btn btn-dark">Free quote</a></li>
+  </ul>
+</nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div class="reveal">
+    <span class="kicker">Delicious from the heart, in Thailand</span>
+    <h1>The ultimate crunch. The truest flavor.</h1>
+    <p>It's not just a snack. It's the real taste of fruit, frozen to a perfect, airy crisp. No smell, no mess. Pack it and go wherever your journey takes you.</p>
+    <div class="cta"><a href="#products" class="btn btn-primary">Shop now</a><a href="#about" class="btn btn-line">Our story</a></div>
+  </div>
+  <div class="stage reveal d">
+    <img src="assets/images/1DurianFD.png" alt="Freeze-dried durian">
+    <span class="tag a">100% real fruit</span>
+    <span class="tag b">Light, airy crisp</span>
+  </div>
+</div></div>
+
+<section id="about" class="about"><div class="wrap">
+  <div class="about-img"><img src="assets/images/mix_product.png" alt="HappyFood product range"></div>
+  <div>
+    <h2>Who is HappyFood?</h2>
+    <p class="lead">We are a Thai food company making freeze-dried fruit and tasty ready-to-enjoy products, from our kitchen to your hands.</p>
+    <div class="values">
+      <div class="value"><i>★</i><b>Premium</b><span>Quality ingredients</span></div>
+      <div class="value"><i>✓</i><b>Safety first</b><span>Clean production</span></div>
+      <div class="value"><i>●</i><b>Reliable</b><span>Consistent products</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" class="services"><div class="wrap">
+  <h2>What we make for you</h2>
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true">Freeze-dried fruit</button>
+    <button role="tab" aria-selected="false">Processed food</button>
+    <button role="tab" aria-selected="false">Condiments</button>
+    <button role="tab" aria-selected="false">OEM products</button>
+  </div>
+  <div class="panel on" role="tabpanel"><div>
+    <h3>Freeze-dried fruit</h3>
+    <p>Real fruit, frozen and dried to keep its flavor, color and nutrients. A light crunch that needs no preservatives.</p>
+    <ul><li>Reliable</li><li>Long shelf life</li><li>Travel friendly</li></ul>
+  </div><div class="ph"><img src="assets/images/services-image.jpg" alt="" onerror="this.remove()"></div></div>
+  <div class="panel" role="tabpanel"><div>
+    <h3>Processed food</h3>
+    <p>Ready-to-eat products made from carefully selected Thai ingredients, packed fresh and safe.</p>
+    <ul><li>Ready to eat</li><li>Safe production</li><li>Consistent taste</li></ul>
+  </div><div class="ph"><img src="assets/images/services-image-02.jpg" alt="" onerror="this.remove()"></div></div>
+  <div class="panel" role="tabpanel"><div>
+    <h3>Condiments</h3>
+    <p>Sauces and seasonings that bring authentic Thai flavor to every kitchen.</p>
+    <ul><li>Authentic flavor</li><li>Quality ingredients</li><li>Bulk sizes</li></ul>
+  </div><div class="ph"><img src="assets/images/services-image-03.jpg" alt="" onerror="this.remove()"></div></div>
+  <div class="panel" role="tabpanel"><div>
+    <h3>OEM products</h3>
+    <p>Put your brand on our products. We handle recipe, production and packaging so you can focus on selling.</p>
+    <ul><li>Your brand</li><li>Custom packaging</li><li>Flexible volume</li></ul>
+  </div><div class="ph"><img src="assets/images/services-image-04.jpg" alt="" onerror="this.remove()"></div></div>
+</div></section>
+
+<div id="quote" class="oem"><div class="wrap">
+  <div>
+    <h2>Want your own OEM product?</h2>
+    <p>Leave your website and email. We'll send you a quote.</p>
+  </div>
+  <form action="#" method="GET">
+    <input class="field" type="url" name="web" placeholder="Your website URL" autocomplete="url" required aria-label="Website URL">
+    <input class="field" type="email" name="address" placeholder="Email address" autocomplete="email" required aria-label="Email address">
+    <button class="btn btn-dark" type="submit">Get a quote</button>
+  </form>
+</div></div>
+
+<section id="products"><div class="wrap">
+  <div class="head-row">
+    <h2>Our products</h2>
+    <div class="arrows"><button aria-label="Previous" data-dir="-1">←</button><button aria-label="Next" data-dir="1">→</button></div>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Product list">
+    <a class="card" href="#"><div class="pic"><img src="assets/images/1DurianFD.jpg" alt="Durian Freeze Dry"></div><h3>Durian Freeze Dry</h3><span>Snack</span></a>
+    <a class="card" href="#"><div class="pic"><img src="assets/images/1DurianFD.jpg" alt="Durian Freeze Dry"></div><h3>Durian Freeze Dry</h3><span>Snack</span></a>
+    <a class="card" href="#"><div class="pic"><img src="assets/images/1DurianFD.jpg" alt="Durian Freeze Dry"></div><h3>Durian Freeze Dry</h3><span>Snack</span></a>
+    <a class="card" href="#"><div class="pic"><img src="assets/images/1DurianFD.jpg" alt="Durian Freeze Dry"></div><h3>Durian Freeze Dry</h3><span>Snack</span></a>
+    <a class="card" href="#"><div class="pic"><img src="assets/images/1DurianFD.jpg" alt="Durian Freeze Dry"></div><h3>Durian Freeze Dry</h3><span>Snack</span></a>
+  </div>
+</div></section>
+
+<section id="blog" class="blog"><div class="wrap">
+  <h2>Latest from our blog</h2>
+  <div class="posts">
+    <a class="feature" href="#">
+      <div class="ph"><img src="assets/images/blog-post-01.jpg" alt="" onerror="this.remove()"></div>
+      <div class="body"><div class="meta">Freeze-dried fruit · 6 September 2025</div>
+        <h3>Why freeze-drying keeps fruit tasting fresh</h3>
+        <p>A simple look at how freezing and gently drying fruit locks in flavor, color and crunch without added preservatives.</p></div>
+    </a>
+    <div class="list">
+      <a class="item" href="#"><div class="ph"><img src="assets/images/blog-post-02.jpg" alt="" onerror="this.remove()"></div><div><div class="meta">News · 6 September 2025</div><h3>New flavors coming this season</h3><p>A first look at what our kitchen is working on.</p></div></a>
+      <a class="item" href="#"><div class="ph"><img src="assets/images/blog-post-03.jpg" alt="" onerror="this.remove()"></div><div><div class="meta">Guide · 6 September 2025</div><h3>How to start your own OEM line</h3><p>From first idea to packaged product, step by step.</p></div></a>
+      <a class="item" href="#"><div class="ph"><img src="assets/images/blog-post-04.jpg" alt="" onerror="this.remove()"></div><div><div class="meta">Tips · 6 September 2025</div><h3>Snacks that travel well</h3><p>Light, clean and easy to pack for any trip.</p></div></a>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Get in touch</h2>
+  <div class="grid">
+    <div class="map"><iframe title="HappyFood location" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d323.31353544909865!2d100.44143797102011!3d13.75571999586676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299df34637feb%3A0xcc958fe000461e5e!2zMzMg4LiW4LiZ4LiZIOC4muC4suC4h-C4nuC4o-C4oSDguYHguILguKfguIfguJrguLLguIfguJ7guKPguKEg4LmA4LiC4LiV4LiV4Lil4Li04LmI4LiH4LiK4Lix4LiZIOC4geC4o-C4uOC4h-C5gOC4l-C4nuC4oeC4q-C4suC4meC4hOC4oyAxMDE3MCDguJvguKPguLDguYDguJfguKjguYTguJfguKI!5e0!3m2!1sth!2sfr!4v1757148377793!5m2!1sth!2sfr" allowfullscreen></iframe></div>
+    <div>
+      <div class="info">
+        <a href="tel:0999999999"><small>Phone</small>099-999-9999</a>
+        <a href="mailto:HappyFood@email.com"><small>Email</small>HappyFood@email.com</a>
+        <a href="#contact"><small>Address</small>7 Bangphom 34</a>
+      </div>
+      <form action="" method="post">
+        <div class="two">
+          <input class="field" type="text" name="name" placeholder="Name" autocomplete="name" required aria-label="Name">
+          <input class="field" type="email" name="email" placeholder="Your email" autocomplete="email" required aria-label="Email">
+        </div>
+        <input class="field" type="text" name="subject" placeholder="Subject" aria-label="Subject">
+        <textarea class="field" name="message" placeholder="Message" required aria-label="Message"></textarea>
+        <button class="btn btn-dark" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Copyright © 2025 HappyFood Co., Ltd. All rights reserved.</div></footer>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open')});
+
+  var tabs=document.querySelectorAll('.tabs button'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){
+    tabs.forEach(function(x,j){x.setAttribute('aria-selected',i===j);panels[j].classList.toggle('on',i===j)});
+  })});
+
+  var rail=document.querySelector('.rail');
+  document.querySelectorAll('.arrows button').forEach(function(b){b.addEventListener('click',function(){
+    rail.scrollBy({left:+b.dataset.dir*320,behavior:'smooth'});
+  })});
+
+  var links=document.querySelectorAll('.menu a[href^="#"]:not(.btn)');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id)})}
+  })},{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('main#top,section[id]').forEach(function(s){io.observe(s)});
+})();
+</script>
+</body>
+</html>
